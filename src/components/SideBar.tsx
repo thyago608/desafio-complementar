@@ -1,16 +1,19 @@
-import { Button } from './Button';
-import { useMovie } from '../hook/useMovie';
+import { Button } from "./Button";
+import { useMovie } from "../hook/useMovie";
 
 export function SideBar() {
   const { genres, handleClickButton, selectedGenreId } = useMovie();
 
   return (
     <nav className="sidebar">
-      <span>Watch<p>Me</p></span>
+      <span>
+        Watch<p>Me</p>
+      </span>
 
       <div className="buttons-container">
-        {genres.map(genre => (
+        {genres.map((genre) => (
           <Button
+            key={genre.id}
             id={String(genre.id)}
             title={genre.title}
             iconName={genre.name}
