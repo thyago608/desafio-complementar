@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { useMovie } from "../hook/useMovie";
 import { MovieCard } from "./MovieCard";
 
